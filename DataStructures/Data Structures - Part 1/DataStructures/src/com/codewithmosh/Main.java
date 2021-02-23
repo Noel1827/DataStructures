@@ -1,13 +1,12 @@
 package com.codewithmosh;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] names) {
-        Array numbers = new Array(3);
-     numbers.insert(10);
-     numbers.insert(20);
-     numbers.insert(30);
-     numbers.insert(40);
-     numbers.removeAt(3);
-     System.out.println(numbers.indexOf(10));
+      Array l = new Array(3);
+      l.insert(1);
+      l.insert(2);
+      l.insert(3);
+      System.out.println(l.max());
+       
     }
 }
