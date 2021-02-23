@@ -10,10 +10,9 @@ public class NoelArray {
 
     public void insert(int num) {
         if (index >= size) {
-            int[] copyarr = new int[size + 1];// create the array + 1 space
-            for (int i = 0; i < size; i++)// use this loop to copy all elements to copyarr
-                copyarr[i] = arr[i];
-            copyarr[size] = num;// last element to the element passed in parameter
+            int[] copyarr = new int[size*2];// create the array + 1 space
+            for (int i = 0; i <= size; i++)// use this loop to copy all elements to copyarr
+                copyarr[i] = arr[i]; // last element to the element passed in parameter when i <= to size
             size +=1; // adding one to the size so it wont be bothered in the rest of the class
             arr = new int[size]; // make the boss arr a new int size+1, REMEMBER THE SIZE CHANGED
             for(int i=0; i<size;i++){ // copy all elements from copyarr to arr
@@ -21,8 +20,7 @@ public class NoelArray {
             }
 
         }
-        arr[index] = num;
-        index++;
+        arr[index++] = num;
     }
 
     public void removeAt(int D_index) {
@@ -32,7 +30,7 @@ public class NoelArray {
                 arr[i] = arr[i + 1];
             }
             arr[arr.length - 1] = 0; // last number to 0;
-
+            size--;
         }
     }
 
@@ -46,8 +44,8 @@ public class NoelArray {
     }
 
     public void print(){
-        for(int x:arr){
-            System.out.println(x);
+        for(int i = 0; i< size; i++){
+            
         }
     }
 
