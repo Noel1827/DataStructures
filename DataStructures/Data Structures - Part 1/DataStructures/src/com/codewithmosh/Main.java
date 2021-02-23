@@ -7,6 +7,9 @@ public class Main {
       l.insert(2);
       l.insert(3);
       System.out.println(l.max());
+      Array b = new Array(3);
+      l.insert(1);
+     System.out.println(l.intersect(b));
        
     }
 }
