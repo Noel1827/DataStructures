@@ -53,4 +53,16 @@ public class Array {
        return max;
     }
 
+    public Array intersect(Array other){
+        // find the items that are common in both arrays and insert them at the return array
+        Array returnArray = new Array();// maybe error since it has no parameter
+        for(int x: items){
+            if(other.indexOf(x) >=0)
+            returnArray.insert(x);
+        }
+        return returnArray;
+    }
+
+    
+
 }
