@@ -23,7 +23,7 @@ public class HashMap {
     private int count;
 
     public void put(int key, String value) {
-        var entry = getEntry(key);
+        var entry = getEntry(key); //
         if (entry != null) {
             entry.value = value;
             return;
@@ -55,7 +55,7 @@ public class HashMap {
     }
 
     private Entry getEntry(int key) {
-        var index = getIndex(key);
+        var index = getIndex(key); //
         return index >= 0 ? entries[index] : null;
     }
 
